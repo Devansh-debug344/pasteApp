@@ -68,16 +68,17 @@ const Home = () => {
       </div>
       <div className="relative  ml-[23.6rem] mt-[2rem]">
         <div className="">
-          <FaCircle className="absolute top-[33.8%] left-4 size-3 text-red-600" />
-          <FaCircle className="absolute top-[33.8%] left-9 size-3 text-yellow-500" />
-          <FaCircle className="absolute top-[33.8%] left-14 size-3 text-green-700" />
+          <FaCircle className="absolute top-[60%] left-4 size-3 text-red-600" />
+          <FaCircle className="absolute top-[60%] left-9 size-3 text-yellow-500" />
+          <FaCircle className="absolute top-[60%] left-14 size-3 text-green-700" />
           <button
+            disabled={!value} 
             onClick={() => {
-              navigator.clipboard.writeText(content);
+              navigator.clipboard.writeText(value);
               toast.success("Copy to clipboard");
             }}
           >
-            <IoCopyOutline className="absolute top-[25%] left-[70rem] size-5" />
+            <IoCopyOutline className="absolute top-[55%] left-[70rem] size-5" />
           </button>
         </div>
 
